@@ -1,0 +1,64 @@
+============================================================
+           AI USAGE DECLARATION
+============================================================
+
+Name: Md. Hasib Ali Rishad
+Student ID: 23101389
+Assignment: CSE 391 Assignment 01 - Personal Web Page
+Date: October 19, 2026
+
+------------------------------------------------------------
+1. AI TOOLS USED (check all that apply)
+------------------------------------------------------------
+[ ] None
+[ ] ChatGPT
+[ ] GitHub Copilot
+[X] Google Gemini
+[ ] Claude
+[ ] Cursor
+[ ] Other: ________________
+
+------------------------------------------------------------
+2. PURPOSE OF AI USE (check all that apply)
+------------------------------------------------------------
+[X] Learning/understanding concepts
+[X] Debugging my code
+[X] Generating code snippets
+[X] Writing text content
+[X] Design/styling ideas
+[ ] Image generation
+[ ] Other: ________________
+
+------------------------------------------------------------
+3. DESCRIPTION OF AI USE
+------------------------------------------------------------
+Briefly describe what you used AI for and how:
+Used Google Gemini (Antigravity Assistant) as an interactive pair programming
+assistant to structure semantic HTML5 pages (index.html, hobbies.html, projects.html),
+implement a custom ZenCrypto-inspired CSS stylesheet with responsive layouts and
+persistent dark/light mode switching, format the weekly class routine and 13-week
+syllabus tables, and integrate personal academic/extracurricular information.
+
+
+------------------------------------------------------------
+4. AI-ASSISTED SECTIONS
+------------------------------------------------------------
+List specific files/sections where AI helped significantly:
+
+File: index.html       Section: HTML5 Structure, Schedule Table, Bio & Skills
+File: style.css        Section: Color Variables, Responsive Grids, Dark Mode
+File: hobbies.html     Section: Subpage Layout & Hobbies Content
+File: projects.html    Section: Coursework Portfolio Subpage & Project Milestones
+File: script.js        Section: Page Location, Last Modified & Theme Persistence
+
+------------------------------------------------------------
+5. DECLARATION
+------------------------------------------------------------
+I declare that:
+- This disclosure is complete and accurate
+- I understand all code in my submission
+- I can explain and modify my work if asked
+- I take full responsibility for my submission
+
+Signature: Md. Hasib Ali Rishad
+Date: October 19, 2026
