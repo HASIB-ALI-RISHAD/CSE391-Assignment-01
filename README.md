@@ -10,7 +10,7 @@
 ---
 
 ## 🌐 Live Website (GitHub Pages)
-👉 **[View Live Site](https://hasib-ali-rishad.github.io/CSE391-Assignment-01/)** *(URL format after enabling GitHub Pages)*
+👉 **[View Live Site](https://hasib-ali-rishad.github.io/CSE391-Assignment-01/)**
 
 ---
 
