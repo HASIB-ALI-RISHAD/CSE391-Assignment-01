@@ -1,37 +1,36 @@
 /* ==========================================================================
-   CSE 391: Assignment 1 - Personal Web Page Stylesheet (100% Vanilla CSS)
-   Theme: ZenCrypto Inspired (Clean Minimalist, Lime Accent & Dark Contrast)
-   Includes:
-   - Bonus 2: Pure CSS Dark/Light Mode Toggle (using #theme-toggle:checked)
-   - Bonus 3: Pure CSS @keyframes Animations
+   CSE 391: Assignment 1 — Personal Homepage & Course Portfolio Stylesheet
+   Author: Md. Hasib Ali Rishad (Student ID: 23101389)
+   Theme: ZenCrypto Minimalist Palette (Sage Light Mode / Neon-Lime Dark Mode)
+   Tech Stack: 100% Vanilla CSS3 (Custom Properties, Grid, Flexbox, Keyframes)
    ========================================================================== */
 
-/* Google Fonts Import: Martian Mono (Headings/Monospace) & Inter (Body) */
+/* Google Fonts: Martian Mono (Headings & UI) and Inter (Body Copy) */
 @import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
 
 /* --------------------------------------------------------------------------
-   1. CSS Variables - Light Mode (Default)
+   1. CSS Custom Properties — Light Mode (Default)
    -------------------------------------------------------------------------- */
 :root {
-    --bg-page: #e8ede4;             /* Soft light sage background */
-    --card-bg: #ffffff;             /* Crisp white card background */
-    --card-subtle: #f4f4f4;         /* Subtle gray for inner boxes */
-    --card-hover: #ffffff;          /* Hover background for inner cards */
-    --text-primary: #191314;        /* Dark charcoal near-black text */
-    --text-muted: #555555;          /* Muted body text */
-    --accent-lime: #ecf95a;         /* Vibrant ZenCrypto lime yellow */
-    --link-color: #191314;          /* Standard hyperlink color */
-    --link-hover: #4a5d00;          /* Hyperlink hover color */
-    --border-color: #191314;        /* Solid distinct borders */
-    --border-subtle: #dcdcdc;       /* Light border for inner elements */
+    --bg-page: #e8ede4;             /* Soft light sage page background */
+    --card-bg: #ffffff;             /* Crisp white section surface */
+    --card-subtle: #f4f4f4;         /* Subtle neutral inner card fill */
+    --card-hover: #ffffff;          /* Elevated card hover surface */
+    --text-primary: #191314;        /* Deep charcoal primary text */
+    --text-muted: #555555;          /* Muted secondary body text */
+    --accent-lime: #ecf95a;         /* Signature lime-yellow accent */
+    --link-color: #191314;          /* Standard hyperlink text */
+    --link-hover: #4a5d00;          /* Olive-lime hyperlink hover */
+    --border-color: #191314;        /* Bold structural border */
+    --border-subtle: #dcdcdc;       /* Subtle inner divider border */
     --table-head-bg: #191314;       /* Table header background */
     --table-head-text: #ffffff;     /* Table header text */
-    --table-stripe: #f9fbf2;        /* Subtle table row stripe */
-    --table-hover: #f1f7d6;         /* Highlight on table row hover */
-    --btn-bg: #191314;              /* Primary CTA button background */
-    --btn-text: #ffffff;            /* Primary CTA button text */
-    --photo-card-bg: #ecf95a;       /* Profile photo frame background */
-    --photo-caption: #191314;       /* Profile photo caption text */
+    --table-stripe: #f9fbf2;        /* Alternating table row tint */
+    --table-hover: #f1f7d6;         /* Table row hover highlight */
+    --btn-bg: #191314;              /* Primary button hover fill */
+    --btn-text: #ffffff;            /* Primary button hover text */
+    --photo-card-bg: #ecf95a;       /* Portrait card frame fill */
+    --photo-caption: #191314;       /* Portrait caption color */
     --radius-sm: 8px;
     --radius-md: 16px;
     --radius-lg: 24px;
@@ -42,33 +41,33 @@
 }
 
 /* --------------------------------------------------------------------------
-   2. Bonus 2: Pure CSS Dark Mode Variables (Black + Neon Lime Combo)
-   Activated when the hidden checkbox #theme-toggle is checked
+   2. CSS Custom Properties — Dark Mode (Bonus Challenge 2: Pure CSS Toggle)
+   Activated when the hidden #theme-toggle checkbox is checked.
    -------------------------------------------------------------------------- */
 #theme-toggle:checked ~ .theme-wrapper {
-    --bg-page: #0f110c;             /* Deep black-green background */
-    --card-bg: #181b14;             /* Dark charcoal card background */
-    --card-subtle: #22271c;         /* Elevated dark inner box background */
-    --card-hover: #2a3023;          /* Hover background for inner cards */
-    --text-primary: #f4f6f0;        /* Crisp off-white text (never invisible) */
-    --text-muted: #b8c2ad;          /* Soft light sage-gray muted text */
-    --accent-lime: #ecf95a;         /* Vibrant ZenCrypto lime accent */
-    --link-color: #ecf95a;          /* Bright lime links in dark mode */
-    --link-hover: #ffffff;          /* White underline on link hover */
-    --border-color: #ecf95a;        /* Neon lime borders in dark mode */
-    --border-subtle: #363e2d;       /* Subtle dark olive border */
-    --table-head-bg: #252b1e;       /* Dark header for table */
-    --table-head-text: #ecf95a;     /* Lime text in table header */
+    --bg-page: #0f110c;             /* Deep obsidian-olive page background */
+    --card-bg: #181b14;             /* Charcoal section card surface */
+    --card-subtle: #22271c;         /* Elevated inner container fill */
+    --card-hover: #2a3023;          /* Subtle dark card hover state */
+    --text-primary: #f4f6f0;        /* High-contrast off-white text */
+    --text-muted: #b8c2ad;          /* Readable sage-gray secondary text */
+    --accent-lime: #ecf95a;         /* Signature neon-lime accent */
+    --link-color: #ecf95a;          /* High-visibility lime links */
+    --link-hover: #ffffff;          /* Crisp white link hover */
+    --border-color: #ecf95a;        /* Neon-lime structural borders */
+    --border-subtle: #363e2d;       /* Muted olive inner border */
+    --table-head-bg: #252b1e;       /* Dark olive table header */
+    --table-head-text: #ecf95a;     /* Neon-lime table header text */
     --table-stripe: #1d2118;        /* Dark alternating table row */
-    --table-hover: #2c3324;         /* Table row hover in dark mode */
-    --btn-bg: #ecf95a;              /* Lime CTA button in dark mode */
-    --btn-text: #191314;            /* Dark text on lime CTA button */
-    --photo-card-bg: #22271c;       /* Dark frame for profile photo */
-    --photo-caption: #ecf95a;       /* Lime caption text in dark mode */
+    --table-hover: #2c3324;         /* Dark table row hover highlight */
+    --btn-bg: #ecf95a;              /* Lime button hover fill */
+    --btn-text: #191314;            /* Charcoal button hover text */
+    --photo-card-bg: #22271c;       /* Dark portrait frame fill */
+    --photo-caption: #ecf95a;       /* Lime portrait caption */
 }
 
 /* --------------------------------------------------------------------------
-   3. Bonus 3: Pure CSS Animations (@keyframes)
+   3. Keyframe Animations (Bonus Challenge 3: Pure CSS Visual Motion)
    -------------------------------------------------------------------------- */
 @keyframes fadeInUp {
     from {
@@ -106,7 +105,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   4. Base & Reset Styles
+   4. Base Reset, Typography & Page Layout
    -------------------------------------------------------------------------- */
 * {
     box-sizing: border-box;
@@ -125,7 +124,7 @@ body {
     color: var(--text-primary);
 }
 
-/* Full-viewport theme wrapper so CSS variables & background apply everywhere */
+/* Full-viewport wrapper carrying CSS custom properties for active theme */
 .theme-wrapper {
     min-height: 100vh;
     width: 100%;
@@ -136,14 +135,13 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Page wrapper to center content */
+/* Centered max-width container */
 .page-wrapper {
     max-width: 1100px;
     margin: 0 auto;
     color: var(--text-primary);
 }
 
-/* Headings */
 h1, h2, h3, h4 {
     font-family: var(--font-heading);
     color: var(--text-primary);
@@ -191,14 +189,13 @@ a:hover {
 }
 
 /* --------------------------------------------------------------------------
-   5. Bonus 2: Pure CSS Dark/Light Mode Toggle Switch
+   5. Dark / Light Mode Toggle Switch (Bonus Challenge 2)
    -------------------------------------------------------------------------- */
 .theme-toggle-input,
 .nav-toggle-input {
     display: none;
 }
 
-/* Vibrant Lime-Green Pill Button on Far Right of Navbar */
 .theme-toggle-label {
     display: inline-flex;
     align-items: center;
@@ -240,7 +237,7 @@ a:hover {
     box-shadow: 0 4px 14px rgba(236, 249, 90, 0.28);
 }
 
-/* Show appropriate label text + monochrome SVG icon depending on current mode */
+/* Swap monochrome moon/sun SVG icons according to active mode */
 .toggle-text-dark {
     display: inline-flex;
     align-items: center;
@@ -262,7 +259,7 @@ a:hover {
 }
 
 /* --------------------------------------------------------------------------
-   6. Header & Navigation (Part 1, Item 2 — Theme-Synced Single-Row Bar)
+   6. Site Header, Navigation & Breadcrumbs (Part 1, Item 2)
    -------------------------------------------------------------------------- */
 .site-header {
     background-color: var(--card-bg);
@@ -319,7 +316,7 @@ a:hover {
     white-space: nowrap;
 }
 
-/* Navigation Links (Right-aligned clean text links with crisp underline) */
+/* Navigation links pushed right alongside the Dark Mode pill */
 .site-nav {
     display: flex;
     align-items: center;
@@ -390,7 +387,7 @@ a:hover {
     transform: translate(1.5px, -1.5px);
 }
 
-/* Far-right action wrapper (Dark Mode green pill + Mobile menu toggle) */
+/* Far-right header controls */
 .header-actions {
     display: inline-flex;
     align-items: center;
@@ -398,7 +395,7 @@ a:hover {
     flex-shrink: 0;
 }
 
-/* Mobile Hamburger Button (Hidden on Desktop) */
+/* Pure-CSS Mobile Hamburger Trigger (hidden on desktop) */
 .nav-hamburger {
     display: none;
     flex-direction: column;
@@ -433,7 +430,7 @@ a:hover {
     transition: transform 0.25s ease, opacity 0.2s ease, background-color 0.2s ease;
 }
 
-/* Breadcrumb Trail Navigation (Subpages) */
+/* Breadcrumb navigation for subpages */
 .breadcrumb-nav {
     margin-bottom: 20px;
 }
@@ -480,34 +477,8 @@ a:hover {
     font-weight: 700;
 }
 
-/* Primary Call to Action Button ("Contact Me") */
-.btn-cta {
-    background-color: var(--btn-bg);
-    color: var(--btn-text);
-    border: 2px solid var(--border-color);
-    font-family: var(--font-heading);
-    font-size: 0.82rem;
-    font-weight: 700;
-    line-height: 1.2;
-    white-space: nowrap;
-    padding: 8px 16px;
-    border-radius: var(--radius-pill);
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    transition: var(--transition);
-}
-
-.btn-cta:hover {
-    background-color: var(--accent-lime);
-    color: #191314;
-    border-color: var(--accent-lime);
-    transform: translateY(-2px);
-}
-
 /* --------------------------------------------------------------------------
-   7. Sections & Card Containers (Part 1, Item 1 & 4)
+   7. Content Sections & Tag Pills (Part 1, Items 1 & 4)
    -------------------------------------------------------------------------- */
 .content-section {
     background-color: var(--card-bg);
@@ -520,7 +491,6 @@ a:hover {
     transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
-/* Section Tag Pill */
 .section-pill {
     display: inline-block;
     background-color: var(--card-subtle);
@@ -537,7 +507,7 @@ a:hover {
 }
 
 /* --------------------------------------------------------------------------
-   8. Hero & Personal Info (Part 1, Item 1 & 3)
+   8. Hero Section, Profile Photo & Info Badges (Part 1, Items 1 & 3)
    -------------------------------------------------------------------------- */
 .hero-grid {
     display: grid;
@@ -561,7 +531,6 @@ a:hover {
     color: var(--text-muted);
 }
 
-/* Animated pulsing green indicator dot (Bonus 3) */
 .status-dot {
     width: 10px;
     height: 10px;
@@ -591,7 +560,7 @@ a:hover {
     color: var(--text-muted);
 }
 
-/* Profile Photo Container (Part 1, Item 3 & Part 3, Item 1) */
+/* Local portrait frame & social profile pills */
 .hero-photo-wrapper {
     display: flex;
     flex-direction: column;
@@ -614,6 +583,25 @@ a:hover {
 
 .photo-card:hover {
     transform: translateY(-4px);
+}
+
+.profile-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: var(--radius-md);
+    border: 2px solid var(--border-color);
+    display: block;
+    background-color: transparent;
+}
+
+.photo-caption {
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--photo-caption);
 }
 
 .profile-social-links {
@@ -650,25 +638,7 @@ a:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.profile-img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    border-radius: var(--radius-md);
-    border: 2px solid var(--border-color);
-    display: block;
-    background-color: transparent;
-}
-
-.photo-caption {
-    margin-top: 10px;
-    font-family: var(--font-heading);
-    font-size: 0.8rem;
-    font-weight: 700;
-    color: var(--photo-caption);
-}
-
-/* Personal Quick Info Badges */
+/* Personal info badges grid */
 .info-badges-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
@@ -706,7 +676,7 @@ a:hover {
 }
 
 /* --------------------------------------------------------------------------
-   9. Quote Box (Part 2, Item 2)
+   9. Favorite Quote & Web Image Card (Part 2, Item 2 & Part 3, Item 1)
    -------------------------------------------------------------------------- */
 .quote-container {
     background-color: var(--card-bg);
@@ -757,12 +727,16 @@ a:hover {
 }
 
 /* --------------------------------------------------------------------------
-   10. Two-Column Cards Layout
+   10. Two-Column Feature Cards (Education, Experience & Extracurriculars)
    -------------------------------------------------------------------------- */
 .two-col-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 24px;
+}
+
+.two-col-grid-spaced {
+    margin-top: 20px;
 }
 
 .feature-card {
@@ -779,8 +753,38 @@ a:hover {
     transform: translateY(-3px);
 }
 
+.card-degree-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.card-meta-line {
+    margin-bottom: 8px;
+}
+
+.card-intro-copy {
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+}
+
+.exp-role-line {
+    margin-bottom: 4px;
+}
+
+.exp-role-desc {
+    font-size: 0.86rem;
+    margin-bottom: 12px;
+    color: var(--text-muted);
+}
+
+.exp-role-desc:last-child {
+    margin-bottom: 0;
+}
+
 /* --------------------------------------------------------------------------
-   11. Skills Badges (Part 1, Item 4)
+   11. Technical & Creative Skill Pills (Part 1, Item 4)
    -------------------------------------------------------------------------- */
 .skills-container {
     display: flex;
@@ -812,7 +816,7 @@ a:hover {
 }
 
 /* --------------------------------------------------------------------------
-   12. Table Styling (Part 3, Item 2 & 3: Striped, Borders, Responsive, Hover)
+   12. Weekly Class Schedule Table (Part 3, Items 2 & 3)
    -------------------------------------------------------------------------- */
 .table-responsive {
     width: 100%;
@@ -852,12 +856,12 @@ a:hover {
     color: var(--text-primary);
 }
 
-/* Striped rows requirement */
+/* Striped alternating rows */
 .custom-table tbody tr:nth-child(even) {
     background-color: var(--table-stripe);
 }
 
-/* Hover effects requirement */
+/* Row hover highlight */
 .custom-table tbody tr:hover {
     background-color: var(--table-hover);
     transition: background-color 0.15s ease;
@@ -872,28 +876,25 @@ a:hover {
     border-top: 2px solid var(--border-color);
 }
 
-/* Multiline paragraph inside table cells */
-.table-desc {
-    margin: 4px 0 0 0;
-    font-size: 0.82rem;
-    color: var(--text-muted);
-    line-height: 1.4;
-}
-
-/* Grade badges in table */
-.grade-badge {
-    display: inline-block;
-    background-color: var(--accent-lime);
-    color: #191314; /* Always dark text on lime badge */
-    font-family: var(--font-heading);
+/* Schedule cell helper classes */
+.custom-table td.time-slot-cell {
     font-weight: 700;
-    font-size: 0.75rem;
-    padding: 2px 8px;
-    border-radius: var(--radius-pill);
-    border: 1px solid #191314;
+    background-color: var(--card-subtle);
+    vertical-align: middle;
 }
 
-/* Schedule cell styling */
+.custom-table td.empty-slot-cell {
+    text-align: center;
+    color: var(--text-muted);
+    vertical-align: middle;
+}
+
+.custom-table td.featured-slot-cell {
+    vertical-align: middle;
+    border-left: 3px solid var(--accent-lime);
+    background-color: var(--card-subtle);
+}
+
 .schedule-item {
     display: flex;
     flex-direction: column;
@@ -913,13 +914,54 @@ a:hover {
     font-weight: 500;
 }
 
+.table-desc {
+    margin: 4px 0 0 0;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+}
+
+.schedule-links-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    margin-top: 6px;
+}
+
+.schedule-links-row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    margin-top: 6px;
+}
+
+.schedule-links-row .schedule-badge {
+    margin-top: 0;
+}
+
+.schedule-inline-link {
+    font-family: var(--font-body);
+    font-size: 0.74rem;
+    font-weight: 700;
+    color: var(--link-color);
+    text-decoration: underline;
+    white-space: nowrap;
+    width: fit-content;
+}
+
 .schedule-badge {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    font-family: var(--font-body);
     font-size: 0.7rem;
     font-weight: 700;
+    line-height: 1.3;
+    white-space: nowrap;
     background-color: var(--accent-lime);
     color: #191314;
-    padding: 2px 8px;
+    padding: 2px 9px;
     border-radius: var(--radius-pill);
     border: 1px solid #191314;
     width: fit-content;
@@ -929,30 +971,53 @@ a:hover {
 .discord-schedule-link {
     display: inline-flex;
     align-items: center;
-    gap: 4px;
+    gap: 5px;
+    font-family: var(--font-body);
     font-size: 0.7rem;
-    font-family: var(--font-heading);
     font-weight: 700;
-    color: #5865F2;
-    background-color: rgba(88, 101, 242, 0.12);
-    border: 1px solid rgba(88, 101, 242, 0.35);
-    padding: 2px 7px;
+    line-height: 1.3;
+    white-space: nowrap;
+    color: #191314;
+    background-color: #ffffff;
+    border: 1px solid #191314;
+    padding: 2px 9px;
     border-radius: var(--radius-pill);
     text-decoration: none;
     width: fit-content;
-    margin-top: 4px;
     transition: var(--transition);
 }
 
-.discord-schedule-link:hover {
-    background-color: #5865F2;
-    color: #ffffff;
-    border-color: #5865F2;
+.discord-schedule-link svg {
+    flex-shrink: 0;
+    color: #5865F2;
+    transition: color 0.2s ease;
+}
+
+#theme-toggle:checked ~ .theme-wrapper .discord-schedule-link {
+    color: var(--text-primary);
+    background-color: var(--card-bg);
+    border-color: var(--accent-lime);
+}
+
+#theme-toggle:checked ~ .theme-wrapper .discord-schedule-link svg {
+    color: var(--accent-lime);
+}
+
+.discord-schedule-link:hover,
+#theme-toggle:checked ~ .theme-wrapper .discord-schedule-link:hover {
+    background-color: var(--accent-lime);
+    color: #191314;
+    border-color: var(--border-color);
     transform: translateY(-1px);
 }
 
+.discord-schedule-link:hover svg,
+#theme-toggle:checked ~ .theme-wrapper .discord-schedule-link:hover svg {
+    color: #191314;
+}
+
 /* --------------------------------------------------------------------------
-   13. Lists Styling (Part 2, Item 3)
+   13. Ordered & Unordered Favorites Lists (Part 2, Item 3)
    -------------------------------------------------------------------------- */
 .styled-list {
     margin-left: 20px;
@@ -970,87 +1035,7 @@ a:hover {
 }
 
 /* --------------------------------------------------------------------------
-   14. Categorized Links Grid (Part 1, Item 1 & Part 2, Item 4)
-   -------------------------------------------------------------------------- */
-.categories-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 16px;
-    margin-top: 16px;
-}
-
-.category-card {
-    background-color: var(--card-subtle);
-    border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-md);
-    padding: 18px;
-    transition: var(--transition);
-}
-
-.category-card:hover {
-    border-color: var(--border-color);
-    background-color: var(--card-hover);
-    transform: translateY(-3px);
-}
-
-.category-title {
-    font-family: var(--font-heading);
-    font-size: 0.95rem;
-    margin-bottom: 10px;
-    color: var(--text-primary);
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.category-links-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.category-links-list li {
-    margin-bottom: 8px;
-}
-
-.category-links-list a {
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    font-size: 0.88rem;
-    color: var(--link-color);
-    font-weight: 500;
-}
-
-.category-links-list a:hover {
-    color: var(--link-hover);
-    text-decoration: underline;
-}
-
-/* Web Image card (Part 3, Item 1: Second image from web) */
-.web-image-card {
-    display: grid;
-    grid-template-columns: 200px 1fr;
-    gap: 20px;
-    background-color: var(--card-subtle);
-    border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-md);
-    padding: 16px;
-    align-items: center;
-    margin-top: 16px;
-}
-
-.web-image-card img {
-    width: 100%;
-    height: 140px;
-    object-fit: cover;
-    border-radius: var(--radius-sm);
-    border: 2px solid var(--border-color);
-}
-
-/* --------------------------------------------------------------------------
-   15. Bonus 1: Contact Form (Sends Email directly with mailto:)
+   14. Email Contact Form (Bonus Challenge 1: mailto Submission)
    -------------------------------------------------------------------------- */
 .contact-form {
     display: grid;
@@ -1098,9 +1083,15 @@ a:hover {
     box-shadow: 0 0 0 3px rgba(236, 249, 90, 0.45);
 }
 
+.form-submit-row {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 8px;
+}
+
 .btn-submit {
     background-color: var(--accent-lime);
-    color: #191314; /* Always dark charcoal text on lime button */
+    color: #191314;
     border: 2px solid var(--border-color);
     padding: 12px 24px;
     border-radius: var(--radius-pill);
@@ -1122,7 +1113,7 @@ a:hover {
 }
 
 /* --------------------------------------------------------------------------
-   16. Footer (Part 3, Item 5 & Part 4: Copyright, Location, Modification Date)
+   15. Site Footer & Page Metadata Box (Part 3, Item 5 & Part 4, Item 1)
    -------------------------------------------------------------------------- */
 .site-footer {
     background-color: var(--card-bg);
@@ -1170,7 +1161,7 @@ a:hover {
 }
 
 /* --------------------------------------------------------------------------
-   17. Subpages & Course Project Portfolio Styles
+   16. Course Projects Portfolio Cards (projects.html)
    -------------------------------------------------------------------------- */
 .project-grid {
     display: grid;
@@ -1199,6 +1190,14 @@ a:hover {
 
 .project-card.completed {
     border-color: var(--border-color);
+}
+
+.project-card.capstone-featured {
+    grid-column: 1 / -1;
+    border-color: var(--border-color);
+    border-width: 3px;
+    background-color: var(--card-bg);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08), inset 8px 0 0 var(--accent-lime);
 }
 
 .project-card-top {
@@ -1263,27 +1262,6 @@ a:hover {
     margin-bottom: 14px;
 }
 
-.project-features-list {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 16px 0;
-}
-
-.project-features-list li {
-    font-size: 0.85rem;
-    color: var(--text-primary);
-    margin-bottom: 6px;
-    display: flex;
-    align-items: flex-start;
-    gap: 8px;
-}
-
-.project-features-list li::before {
-    content: "▹";
-    color: var(--accent-lime);
-    font-weight: bold;
-}
-
 .project-tags-container {
     display: flex;
     flex-wrap: wrap;
@@ -1322,11 +1300,6 @@ a:hover {
     transform: translateY(-2px);
 }
 
-.btn-project-link.primary {
-    background-color: var(--accent-lime);
-    color: #191314;
-}
-
 .btn-project-link.disabled {
     opacity: 0.6;
     cursor: default;
@@ -1335,7 +1308,7 @@ a:hover {
 }
 
 /* --------------------------------------------------------------------------
-   19. Course Outline, Syllabus Roadmap & Assessment Breakdown Styles
+   17. Course Overview, Grade Breakdown & Syllabus Table (projects.html)
    -------------------------------------------------------------------------- */
 .course-overview-panel {
     background-color: var(--card-bg);
@@ -1382,12 +1355,39 @@ a:hover {
     color: var(--text-primary);
 }
 
+.course-meta-sub {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 4px;
+}
+
 .grade-breakdown-box {
     background-color: var(--card-subtle);
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-md);
     padding: 20px;
     margin: 20px 0;
+}
+
+.grade-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.grade-header-title {
+    margin: 0;
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+}
+
+.grade-header-total {
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--text-muted);
 }
 
 .grade-breakdown-bar {
@@ -1420,22 +1420,22 @@ a:hover {
 
 .seg-assignments {
     width: 20%;
-    background-color: #bbf7d0; /* Soft pastel green */
+    background-color: #bbf7d0;
 }
 
 .seg-midterm {
     width: 20%;
-    background-color: #fef08a; /* Soft pastel amber */
+    background-color: #fef08a;
 }
 
 .seg-project {
     width: 30%;
-    background-color: var(--accent-lime); /* Vibrant lime for Project & Term Paper */
+    background-color: var(--accent-lime);
 }
 
 .seg-final {
     width: 30%;
-    background-color: #93c5fd; /* Soft pastel blue */
+    background-color: #93c5fd;
 }
 
 .grade-legend {
@@ -1461,25 +1461,13 @@ a:hover {
     display: inline-block;
 }
 
-.project-card.capstone-featured {
-    border-color: var(--border-color);
-    border-width: 3px;
-    background-color: var(--card-bg);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08), inset 8px 0 0 var(--accent-lime);
-}
+.dot-assignments { background-color: #bbf7d0; }
+.dot-midterm     { background-color: #fef08a; }
+.dot-project     { background-color: var(--accent-lime); }
+.dot-final       { background-color: #93c5fd; }
 
-.capstone-star-badge {
-    background-color: var(--accent-lime);
-    color: #191314;
-    font-family: var(--font-heading);
-    font-weight: 700;
-    font-size: 0.72rem;
-    padding: 3px 10px;
-    border-radius: var(--radius-pill);
-    border: 1px solid var(--border-color);
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
+.subpage-block {
+    margin-top: 38px;
 }
 
 .syllabus-table {
@@ -1527,11 +1515,56 @@ a:hover {
     color: var(--text-primary);
 }
 
+.reference-box {
+    margin-top: 40px;
+    padding: 24px;
+    background-color: var(--card-subtle);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-subtle);
+}
+
+.reference-heading {
+    margin: 6px 0 14px 0;
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+}
+
+.reference-list {
+    margin: 0;
+    padding-left: 20px;
+    line-height: 1.8;
+    font-size: 0.92rem;
+    color: var(--text-primary);
+}
+
+.portfolio-notice-box {
+    margin-top: 28px;
+    padding: 20px;
+    background-color: var(--card-subtle);
+    border-radius: var(--radius-md);
+    border: 2px solid var(--border-color);
+    box-shadow: inset 8px 0 0 var(--accent-lime);
+}
+
+.portfolio-notice-title {
+    margin: 0 0 6px 0;
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    color: var(--text-primary);
+}
+
+.portfolio-notice-copy {
+    margin: 0;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: var(--text-primary);
+}
+
 /* --------------------------------------------------------------------------
-   19. Responsive Layout (Multi-Breakpoint Media Queries)
+   18. Responsive Media Queries (1080px, 980px, 768px, 520px)
    -------------------------------------------------------------------------- */
 
-/* Compact Laptops (981px – 1080px): Keep entire navbar comfortably inside border */
+/* Compact Laptops (981px – 1080px): Keep single-row navbar inside container */
 @media (max-width: 1080px) {
     .site-header {
         padding: 11px 16px;
@@ -1625,11 +1658,17 @@ a:hover {
         color: var(--text-primary);
     }
 
-    .nav-link.active {
+    .nav-link.active,
+    .nav-link.active:hover {
         background-color: var(--accent-lime);
         color: #191314;
         border: 1px solid #191314;
-        font-weight: 600;
+        font-weight: 700;
+    }
+
+    #theme-toggle:checked ~ .theme-wrapper .nav-link.active,
+    #theme-toggle:checked ~ .theme-wrapper .nav-link.active:hover {
+        border-color: var(--accent-lime);
     }
 
     .hero-grid {
@@ -1672,10 +1711,6 @@ a:hover {
     }
 
     .contact-form {
-        grid-template-columns: 1fr;
-    }
-
-    .web-image-card {
         grid-template-columns: 1fr;
     }
 
@@ -1820,5 +1855,3 @@ a:hover {
         line-height: 1.35;
     }
 }
-
-

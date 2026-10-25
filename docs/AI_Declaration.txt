@@ -5,7 +5,7 @@
 Name: Md. Hasib Ali Rishad
 Student ID: 23101389
 Assignment: CSE 391 Assignment 01 - Personal Web Page
-Date: October 19, 2026
+Date: October 25, 2026
 
 ------------------------------------------------------------
 1. AI TOOLS USED (check all that apply)
@@ -33,22 +33,24 @@ Date: October 19, 2026
 3. DESCRIPTION OF AI USE
 ------------------------------------------------------------
 Briefly describe what you used AI for and how:
-Used Google Gemini (Antigravity Assistant) as an interactive pair programming
-assistant to structure semantic HTML5 pages (index.html, projects.html),
-implement a custom ZenCrypto-inspired CSS stylesheet with responsive layouts and
-persistent dark/light mode switching, format the weekly class routine and 13-week
-syllabus tables, and integrate personal academic/extracurricular information.
-
+Used Google Gemini (Antigravity Assistant) as an interactive pair-programming
+assistant to structure semantic HTML5 pages (index.html and projects.html),
+build a custom ZenCrypto-inspired vanilla CSS3 stylesheet with multi-breakpoint
+responsive layouts, pure-CSS dark/light mode switching, and keyframe animations,
+format the Fall 2026 weekly class routine (with rowspan/colspan) and 13-week
+CSE 391 syllabus tables, integrate personal academic/research/club details, and
+validate all markup and styles against official W3C HTML5 and CSS3 standards.
+A complete chronological record of prompts is documented in docs/AI_Prompts.md.
 
 ------------------------------------------------------------
 4. AI-ASSISTED SECTIONS
 ------------------------------------------------------------
 List specific files/sections where AI helped significantly:
 
-File: index.html       Section: HTML5 Structure, Schedule Table, Bio & Skills
-File: style.css        Section: Color Variables, Responsive Grids, Dark Mode
-File: projects.html    Section: Coursework Portfolio Subpage & Project Milestones
-File: script.js        Section: Page Location, Last Modified & Theme Persistence
+File: index.html       Section: Sections 1-10 (Navbar, Bio, Education, Schedule, Lists, Quote, Contact, Footer)
+File: projects.html    Section: Sections 1-8 (Course Overview, Grade Bar, 13-Week Syllabus, Lab Portfolio)
+File: style.css        Section: Sections 1-18 (Theme Variables, Animations, Single-Row Navbar, Tables, Media Queries)
+File: script.js        Section: Modules 1-4 (Theme Persistence, Navbar Hash Sync, Live URL & Last Modified Date)
 
 ------------------------------------------------------------
 5. DECLARATION
@@ -60,4 +62,4 @@ I declare that:
 - I take full responsibility for my submission
 
 Signature: Md. Hasib Ali Rishad
-Date: October 19, 2026
+Date: October 25, 2026

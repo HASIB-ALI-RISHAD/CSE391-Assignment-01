@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- 1. Document Metadata & Character Encoding -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="CSE 391: Programming for the Internet - Course Syllabus, Projects & Capstone Clone Portfolio by Md. Hasib Ali Rishad">
+    <meta name="description" content="CSE 391: Programming for the Internet - Course Syllabus, Projects &amp; Capstone Clone Portfolio by Md. Hasib Ali Rishad">
     <meta name="author" content="Md. Hasib Ali Rishad">
     <title>Course Projects &amp; Syllabus | CSE 391 | Md. Hasib Ali Rishad</title>
 
-    <!-- Favicon (Crisp Vector SVG + High-Res PNG Fallback) -->
+    <!-- 2. Brand Favicons -->
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
     <link rel="icon" type="image/png" sizes="64x64" href="images/favicon.png">
     <link rel="apple-touch-icon" href="images/favicon-256.png">
 
-    <!-- External Stylesheet -->
+    <!-- 3. External Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Bonus Challenge 2: Pure CSS Dark/Light Mode Toggle Checkbox -->
+    <!-- Pure CSS Dark/Light Mode State Checkbox + Immediate Theme Restore -->
     <input type="checkbox" id="theme-toggle" class="theme-toggle-input" aria-label="Toggle dark and light theme">
-    <!-- Immediate theme restoration to prevent flash of light theme on navigation -->
     <script>
         if (localStorage.getItem("site-theme") === "dark") {
             document.getElementById("theme-toggle").checked = true;
@@ -29,9 +29,11 @@
     <div class="theme-wrapper">
         <div class="page-wrapper">
 
-            <!-- Site Header -->
+            <!-- ==================================================================
+                 Section 1: Site Header & Main Navigation
+                 ================================================================== -->
             <header class="site-header">
-                <!-- Pure CSS Mobile Menu Toggle Checkbox -->
+                <!-- Pure CSS Mobile Drawer State Checkbox -->
                 <input type="checkbox" id="nav-toggle" class="nav-toggle-input" aria-label="Toggle navigation menu">
 
                 <a href="index.html" class="brand-badge" title="Md. Hasib Ali Rishad Homepage">
@@ -55,7 +57,7 @@
                     <a href="index.html#contact" class="nav-link">Contact</a>
                 </nav>
 
-                <!-- Far-Right Actions: Lime-Green Dark Mode Pill + Mobile Hamburger -->
+                <!-- Far-Right Controls: Theme Pill Button & Mobile Hamburger -->
                 <div class="header-actions">
                     <label for="theme-toggle" class="theme-toggle-label" title="Toggle Dark and Light Mode">
                         <span class="toggle-text-dark">
@@ -80,7 +82,7 @@
                         </span>
                     </label>
 
-                    <label for="nav-toggle" class="nav-hamburger" aria-label="Toggle navigation menu" title="Menu">
+                    <label for="nav-toggle" class="nav-hamburger" title="Toggle navigation menu">
                         <span class="hamburger-bar"></span>
                         <span class="hamburger-bar"></span>
                         <span class="hamburger-bar"></span>
@@ -90,7 +92,9 @@
 
             <main>
                 <section class="content-section">
-                    <!-- Breadcrumb Navigation -->
+                    <!-- ==============================================================
+                         Section 2: Breadcrumb Navigation & Page Introduction
+                         ============================================================== -->
                     <nav class="breadcrumb-nav" aria-label="Breadcrumb">
                         <ol class="breadcrumb-list">
                             <li class="breadcrumb-item"><a href="index.html">← Home</a></li>
@@ -99,56 +103,56 @@
                         </ol>
                     </nav>
 
-                    <!-- Page Heading -->
                     <h1>CSE 391: Programming for the Internet</h1>
-                    
+
                     <p style="font-size: 1.05rem; line-height: 1.6; margin-top: 8px;">
                         Welcome to my dedicated coursework portfolio. This portal tracks the 13-week curriculum, laboratory assignments, technology stack progression, and practical milestones concluding with the final <strong>Full-Scale Website Clone Capstone</strong> developed throughout Fall 2026 at BRAC University.
                     </p>
 
-                    <!-- Official Course Metadata Panel -->
+                    <!-- ==============================================================
+                         Section 3: Course Specification & Assessment Weight Distribution
+                         ============================================================== -->
                     <div class="course-overview-panel">
-                        <span class="section-pill" style="margin-bottom: 8px;">Academic Curriculum Overview</span>
+                        <span class="section-pill">Academic Curriculum Overview</span>
                         <h2 style="margin: 6px 0 12px 0;">Course Specification &amp; Faculty Details</h2>
-                        
+
                         <div class="course-meta-grid">
                             <div class="course-meta-card">
                                 <span class="course-meta-label">Course Title &amp; Code</span>
                                 <span class="course-meta-val">CSE 391: Programming for the Internet</span>
-                                <span style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">Section: 01 • Fall 2026</span>
+                                <span class="course-meta-sub">Section: 01 • Fall 2026</span>
                             </div>
 
                             <div class="course-meta-card">
                                 <span class="course-meta-label">Course Instructor</span>
                                 <span class="course-meta-val">Muhammad Abdur Rahman (ADR)</span>
-                                <span style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">
-                                    <a href="mailto:abdur.rahman@bracu.ac.bd" style="color: var(--link-color); text-decoration: underline;">abdur.rahman@bracu.ac.bd</a>
+                                <span class="course-meta-sub">
+                                    <a href="mailto:abdur.rahman@bracu.ac.bd">abdur.rahman@bracu.ac.bd</a>
                                 </span>
                             </div>
 
                             <div class="course-meta-card">
                                 <span class="course-meta-label">Academic Department</span>
                                 <span class="course-meta-val">Dept. of Computer Science &amp; Engineering</span>
-                                <span style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">
-                                    <a href="https://www.bracu.ac.bd" target="_blank" rel="noopener noreferrer" style="color: var(--link-color); text-decoration: underline;">BRAC University</a> •
-                                    <a href="https://discord.com/channels/@me" target="_blank" rel="noopener noreferrer" style="color: var(--link-color); text-decoration: underline;">CSE 391 Discord ↗</a>
+                                <span class="course-meta-sub">
+                                    <a href="https://www.bracu.ac.bd" target="_blank" rel="noopener noreferrer">BRAC University</a> •
+                                    <a href="https://discord.gg/XfFEww3kM" target="_blank" rel="noopener noreferrer">CSE 391 Discord ↗</a>
                                 </span>
                             </div>
 
                             <div class="course-meta-card">
                                 <span class="course-meta-label">Required Prerequisites</span>
                                 <span class="course-meta-val">CSE 220 &amp; CSE 370</span>
-                                <span style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">Data Structures &bull; Database Systems</span>
+                                <span class="course-meta-sub">Data Structures • Database Systems</span>
                             </div>
                         </div>
 
-                        <!-- Grading & Assessment Breakdown from Outline -->
                         <div class="grade-breakdown-box">
-                            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
-                                <h3 style="margin: 0; font-family: var(--font-heading); font-size: 0.95rem;">
+                            <div class="grade-header-row">
+                                <h3 class="grade-header-title">
                                     📊 Official Assessment Weight Distribution
                                 </h3>
-                                <span style="font-family: var(--font-heading); font-size: 0.8rem; font-weight: 700; color: var(--text-muted);">Total: 100%</span>
+                                <span class="grade-header-total">Total: 100%</span>
                             </div>
 
                             <div class="grade-breakdown-bar" title="Quizzes/Class Tests/Assignments: 20%, Mid Term Examination: 20%, Project &amp; Term Paper: 30%, Final: 30%">
@@ -160,27 +164,29 @@
 
                             <div class="grade-legend">
                                 <div class="grade-legend-item">
-                                    <span class="grade-dot" style="background-color: #bbf7d0;"></span>
+                                    <span class="grade-dot dot-assignments"></span>
                                     <span>Quizzes / Class Tests / Assignments (20%)</span>
                                 </div>
                                 <div class="grade-legend-item">
-                                    <span class="grade-dot" style="background-color: #fef08a;"></span>
+                                    <span class="grade-dot dot-midterm"></span>
                                     <span>Mid Term Examination (20%)</span>
                                 </div>
                                 <div class="grade-legend-item">
-                                    <span class="grade-dot" style="background-color: var(--accent-lime);"></span>
+                                    <span class="grade-dot dot-project"></span>
                                     <span>Project &amp; Term Paper (30%)</span>
                                 </div>
                                 <div class="grade-legend-item">
-                                    <span class="grade-dot" style="background-color: #93c5fd;"></span>
+                                    <span class="grade-dot dot-final"></span>
                                     <span>Final Examination (30%)</span>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- 13-Week Syllabus Roadmap -->
-                    <div style="margin-top: 36px;">
+                    <!-- ==============================================================
+                         Section 4: 13-Week Course Outline & Lecture Roadmap Table
+                         ============================================================== -->
+                    <div class="subpage-block">
                         <span class="section-pill">13-Week Curriculum Timeline</span>
                         <h2>Course Outlines &amp; Lecture Roadmap</h2>
                         <p>
@@ -191,10 +197,10 @@
                             <table class="syllabus-table" aria-label="13-Week CSE 391 Course Outline and Lab Progression">
                                 <thead>
                                     <tr>
-                                        <th style="width: 14%;">Timeline</th>
-                                        <th style="width: 38%;">Curriculum Topics &amp; Core Concepts</th>
-                                        <th style="width: 28%;">Practical Lab / Project Focus</th>
-                                        <th style="width: 20%;">Tech Stack</th>
+                                        <th scope="col" style="width: 14%;">Timeline</th>
+                                        <th scope="col" style="width: 38%;">Curriculum Topics &amp; Core Concepts</th>
+                                        <th scope="col" style="width: 28%;">Practical Lab / Project Focus</th>
+                                        <th scope="col" style="width: 20%;">Tech Stack</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -277,8 +283,10 @@
                         </div>
                     </div>
 
-                    <!-- Projects Showcase Grid -->
-                    <div style="margin-top: 40px;">
+                    <!-- ==============================================================
+                         Section 5: CSE 391 Laboratory Projects & Capstone Showcase
+                         ============================================================== -->
+                    <div class="subpage-block">
                         <span class="section-pill">Course Milestones &amp; Projects</span>
                         <h2>CSE 391 Laboratory Projects Portfolio</h2>
                         <p>
@@ -286,8 +294,7 @@
                         </p>
 
                         <div class="project-grid">
-
-                            <!-- Project 1: Assignment 01 (Completed) -->
+                            <!-- Card 1: Assignment 01 (Completed) -->
                             <article class="project-card completed">
                                 <div>
                                     <div class="project-card-top">
@@ -298,9 +305,9 @@
                                     </div>
 
                                     <h3 class="project-title">Personal Homepage &amp; Portfolio</h3>
-                                    
+
                                     <p class="project-desc">
-                                        Multi-page personal website and academic schedule hub built with semantic HTML5, custom modular CSS3, and a zero-JS dark/light mode toggle.
+                                        Multi-page personal website and academic schedule hub built with semantic HTML5, custom modular CSS3, and a pure-CSS dark/light mode toggle.
                                     </p>
 
                                     <div class="project-tags-container">
@@ -311,14 +318,13 @@
                                 </div>
 
                                 <div class="project-actions">
-                        
                                     <a href="docs/AI_Declaration.txt" target="_blank" rel="noopener noreferrer" class="btn-project-link">
                                         AI Declaration 📄
                                     </a>
                                 </div>
                             </article>
 
-                            <!-- Project 2: Assignment 02 (Upcoming) -->
+                            <!-- Card 2: Assignment 02 (Upcoming) -->
                             <article class="project-card">
                                 <div>
                                     <div class="project-card-top">
@@ -329,7 +335,7 @@
                                     </div>
 
                                     <h3 class="project-title">Interactive App &amp; Form Checker</h3>
-                                    
+
                                     <p class="project-desc">
                                         Client-side application focusing on event-driven programming, dynamic DOM mutations, real-time input verification, and local state.
                                     </p>
@@ -348,7 +354,7 @@
                                 </div>
                             </article>
 
-                            <!-- Project 3: Assignment 03 (Planned) -->
+                            <!-- Card 3: Assignment 03 (Planned) -->
                             <article class="project-card">
                                 <div>
                                     <div class="project-card-top">
@@ -359,7 +365,7 @@
                                     </div>
 
                                     <h3 class="project-title">Server-Side Portal with PHP</h3>
-                                    
+
                                     <p class="project-desc">
                                         Server-rendered web application handling secure form data processing, persistent cookie preferences, and session-based user authentication.
                                     </p>
@@ -378,7 +384,7 @@
                                 </div>
                             </article>
 
-                            <!-- Project 4: Assignment 04 (Planned) -->
+                            <!-- Card 4: Assignment 04 (Planned) -->
                             <article class="project-card">
                                 <div>
                                     <div class="project-card-top">
@@ -389,7 +395,7 @@
                                     </div>
 
                                     <h3 class="project-title">Database Portal with MySQL</h3>
-                                    
+
                                     <p class="project-desc">
                                         Relational database-backed web portal featuring normalized MySQL schemas and secure CRUD operations via PDO prepared statements.
                                     </p>
@@ -408,16 +414,13 @@
                                 </div>
                             </article>
 
-                            <!-- Project 5: FINAL CAPSTONE (CLONE PROJECT - 30% WEIGHT) -->
-                            <article class="project-card capstone-featured" style="grid-column: 1 / -1;">
+                            <!-- Card 5: Final Capstone Project (30% Weight) -->
+                            <article class="project-card capstone-featured">
                                 <div>
                                     <div class="project-card-top">
-                                        <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
-                                            <span class="project-milestone-tag" style="background-color: var(--accent-lime); font-weight: 800;">
-                                                🏆 Final Capstone
-                                            </span>
-                                        
-                                        </div>
+                                        <span class="project-milestone-tag" style="font-weight: 800;">
+                                            🏆 Final Capstone
+                                        </span>
                                         <span class="project-status-pill">
                                             <span>○</span> Planned • Weeks 12–13+
                                         </span>
@@ -426,7 +429,7 @@
                                     <h3 class="project-title" style="font-size: 1.25rem;">
                                         Full-Scale Commercial Website Clone &amp; Term Paper
                                     </h3>
-                                    
+
                                     <p class="project-desc" style="max-width: 820px;">
                                         The crowning final project of CSE 391: a dedicated, full-stack clone of a production commercial platform (e.g., Amazon or Netflix). Combines responsive frontend UI, asynchronous AJAX data updates, modular PHP backend, relational MySQL database, and an IEEE-format Term Paper.
                                     </p>
@@ -439,23 +442,24 @@
                                     </div>
                                 </div>
 
-                                <div class="project-actions" style="margin-top: 16px;">
+                                <div class="project-actions">
                                     <span class="btn-project-link disabled">
                                         🔒 Clone Target Selection &amp; Git Repository Scheduled for November 2026
                                     </span>
                                 </div>
                             </article>
-
                         </div>
                     </div>
 
-                    <!-- Recommended Textbooks & Reference Literature from Syllabus -->
-                    <div style="margin-top: 40px; padding: 24px; background-color: var(--card-subtle); border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
-                        <span class="section-pill" style="margin-bottom: 8px;">Course Textbooks</span>
-                        <h3 style="margin: 6px 0 14px 0; font-family: var(--font-heading); font-size: 1.05rem;">
+                    <!-- ==============================================================
+                         Section 6: Official Reference Literature & Portfolio Notice
+                         ============================================================== -->
+                    <div class="reference-box">
+                        <span class="section-pill">Course Textbooks</span>
+                        <h3 class="reference-heading">
                             📚 Official Reference Literature &amp; Textbooks
                         </h3>
-                        <ul style="margin: 0; padding-left: 20px; line-height: 1.8; font-size: 0.92rem; color: var(--text-primary);">
+                        <ul class="reference-list">
                             <li><strong>[WS]</strong> <em>Web Standards: Programmer's Reference</em> — Steven M. Schafer (Wiley Publishing, 2005)</li>
                             <li><strong>[HTML5]</strong> <em>HTML5: The Missing Manual</em> — Matthew MacDonald (O'Reilly Media Inc., 2014)</li>
                             <li><strong>[J&amp;J]</strong> <em>JavaScript &amp; jQuery: Interactive Front-End Web Development</em> — Jon Duckett (John Wiley &amp; Sons, 2014)</li>
@@ -464,26 +468,25 @@
                         </ul>
                     </div>
 
-                    <!-- Continuous Updates Notice -->
-                    <div style="margin-top: 28px; padding: 20px; background-color: var(--card-subtle); border-radius: var(--radius-md); border: 2px solid var(--border-color); box-shadow: inset 8px 0 0 var(--accent-lime);">
-                        <h4 style="margin: 0 0 6px 0; font-family: var(--font-heading); font-size: 0.95rem; color: var(--text-primary);">
+                    <div class="portfolio-notice-box">
+                        <h4 class="portfolio-notice-title">
                             📌 Continuous Portfolio &amp; Submission Updates
                         </h4>
-                        <p style="margin: 0; font-size: 0.92rem; line-height: 1.6; color: var(--text-primary);">
-                            As each lab assignment, sprint deliverable, and the final commercial website clone progress during Fall 2026, direct GitHub repositories, live Vercel/Netlify/Heroku deployments, and term paper links will be attached to this page.
+                        <p class="portfolio-notice-copy">
+                            As each lab assignment, sprint deliverable, and the final commercial website clone progress during Fall 2026, direct GitHub repositories, live deployments, and term paper links will be attached to this page.
                         </p>
                     </div>
-
                 </section>
             </main>
 
-            <!-- Site Footer -->
+            <!-- ==================================================================
+                 Section 7: Site Footer & Live Page Metadata
+                 ================================================================== -->
             <footer class="site-footer">
                 <p class="footer-credits">
                     &copy; 2026 Md. Hasib Ali Rishad. Built for CSE 391: Programming for the Internet. All rights reserved.
                 </p>
 
-                <!-- Part 3, Item 5: Page Location & Last Modification Date -->
                 <div class="footer-meta-box">
                     <p class="footer-meta-item">
                         📍 <strong>Page Location (URL):</strong> <code id="page-location">Loading location...</code>
@@ -497,7 +500,9 @@
         </div><!-- /.page-wrapper -->
     </div><!-- /.theme-wrapper -->
 
-    <!-- Vanilla JavaScript for Page Location and Last Modified Date -->
+    <!-- ==================================================================
+         Section 8: External JavaScript (Page URL, Modified Date & Theme Sync)
+         ================================================================== -->
     <script src="script.js"></script>
 </body>
 </html>
