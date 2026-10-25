@@ -23,7 +23,6 @@
 ├── docs/
 │   ├── AI_Declaration.txt            # Completed & signed official AI usage declaration
 │   ├── AI_Prompts.md                 # Detailed chronological AI prompts & iteration log
-│   ├── Project_Documentation.md      # Technical overview & rubric compliance matrix
 │   └── CSE 391- Assignment 1 V2.pdf  # Official Assignment 01 specification document
 └── images/
     ├── hasib.jpg                     # Locally stored student portrait photo
