@@ -26,7 +26,7 @@ Date: October 25, 2026
 [X] Generating code snippets
 [X] Writing text content
 [X] Design/styling ideas
-[ ] Image generation
+[X] Image generation
 [ ] Other: ________________
 
 ------------------------------------------------------------
