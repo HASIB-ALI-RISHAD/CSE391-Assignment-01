@@ -27,7 +27,31 @@
         });
     }
 
-    // --- 2. Live Page URL and Document Modification Metadata ---
+    // --- 2. Mobile Navbar Auto-Close & Active Underline State ---
+    function initNavigationUX() {
+        var navToggle = document.getElementById("nav-toggle");
+        var navLinks = document.querySelectorAll(".site-nav .nav-link");
+
+        for (var i = 0; i < navLinks.length; i++) {
+            navLinks[i].addEventListener("click", function () {
+                // Close mobile menu drawer automatically after selecting a link
+                if (navToggle && navToggle.checked) {
+                    navToggle.checked = false;
+                }
+
+                // Update active underline bar for in-page section anchors
+                var href = this.getAttribute("href") || "";
+                if (href.charAt(0) === "#") {
+                    for (var j = 0; j < navLinks.length; j++) {
+                        navLinks[j].classList.remove("active");
+                    }
+                    this.classList.add("active");
+                }
+            });
+        }
+    }
+
+    // --- 3. Live Page URL and Document Modification Metadata ---
     function updatePageMetadata() {
         var locationElement = document.getElementById("page-location");
         if (locationElement) {
@@ -40,9 +64,14 @@
         }
     }
 
-    if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", updatePageMetadata);
-    } else {
+    function initAll() {
         updatePageMetadata();
+        initNavigationUX();
+    }
+
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", initAll);
+    } else {
+        initAll();
     }
 })();

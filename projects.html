@@ -31,6 +31,9 @@
 
             <!-- Site Header -->
             <header class="site-header">
+                <!-- Pure CSS Mobile Menu Toggle Checkbox -->
+                <input type="checkbox" id="nav-toggle" class="nav-toggle-input" aria-label="Toggle navigation menu">
+
                 <a href="index.html" class="brand-badge" title="Md. Hasib Ali Rishad Homepage">
                     <span class="brand-logo">HR</span>
                     <span class="brand-name">Md. Hasib Ali Rishad</span>
@@ -49,14 +52,40 @@
                             <path d="M7 7h10v10"></path>
                         </svg>
                     </a>
-                    <a href="index.html#contact" class="btn-cta">Contact ✉</a>
-
-                    <!-- Pure CSS Dark/Light Mode Toggle Button in Navbar -->
-                    <label for="theme-toggle" class="theme-toggle-label" title="Toggle Dark and Light Mode">
-                        <span class="toggle-text-dark">🌙 Dark Mode</span>
-                        <span class="toggle-text-light">☀️ Light Mode</span>
-                    </label>
+                    <a href="index.html#contact" class="nav-link">Contact</a>
                 </nav>
+
+                <!-- Far-Right Actions: Lime-Green Dark Mode Pill + Mobile Hamburger -->
+                <div class="header-actions">
+                    <label for="theme-toggle" class="theme-toggle-label" title="Toggle Dark and Light Mode">
+                        <span class="toggle-text-dark">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                            </svg>
+                            <span>Dark<span class="mode-word"> Mode</span></span>
+                        </span>
+                        <span class="toggle-text-light">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <circle cx="12" cy="12" r="5"></circle>
+                                <line x1="12" y1="1" x2="12" y2="3"></line>
+                                <line x1="12" y1="21" x2="12" y2="23"></line>
+                                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                <line x1="1" y1="12" x2="3" y2="12"></line>
+                                <line x1="21" y1="12" x2="23" y2="12"></line>
+                                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                            </svg>
+                            <span>Light<span class="mode-word"> Mode</span></span>
+                        </span>
+                    </label>
+
+                    <label for="nav-toggle" class="nav-hamburger" aria-label="Toggle navigation menu" title="Menu">
+                        <span class="hamburger-bar"></span>
+                        <span class="hamburger-bar"></span>
+                        <span class="hamburger-bar"></span>
+                    </label>
+                </div>
             </header>
 
             <main>
