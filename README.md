@@ -18,7 +18,6 @@
 ```
 ├── index.html        # Main landing page (About, Education, Skills, Schedule, Favorites, Contact)
 ├── projects.html     # Dedicated CSE 391 coursework, assessment breakdown & 13-week syllabus
-├── hobbies.html      # Extracurricular activities, leadership, and hobbies
 ├── style.css         # Custom responsive stylesheet with ZenCrypto theme & dark/light mode
 ├── script.js         # Dynamic page location (URL), last modified date & theme persistence
 ├── docs/

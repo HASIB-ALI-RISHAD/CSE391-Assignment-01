@@ -34,7 +34,7 @@ Date: October 19, 2026
 ------------------------------------------------------------
 Briefly describe what you used AI for and how:
 Used Google Gemini (Antigravity Assistant) as an interactive pair programming
-assistant to structure semantic HTML5 pages (index.html, hobbies.html, projects.html),
+assistant to structure semantic HTML5 pages (index.html, projects.html),
 implement a custom ZenCrypto-inspired CSS stylesheet with responsive layouts and
 persistent dark/light mode switching, format the weekly class routine and 13-week
 syllabus tables, and integrate personal academic/extracurricular information.
@@ -47,7 +47,6 @@ List specific files/sections where AI helped significantly:
 
 File: index.html       Section: HTML5 Structure, Schedule Table, Bio & Skills
 File: style.css        Section: Color Variables, Responsive Grids, Dark Mode
-File: hobbies.html     Section: Subpage Layout & Hobbies Content
 File: projects.html    Section: Coursework Portfolio Subpage & Project Milestones
 File: script.js        Section: Page Location, Last Modified & Theme Persistence
 

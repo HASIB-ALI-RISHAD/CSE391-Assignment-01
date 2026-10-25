@@ -300,6 +300,9 @@ a:hover {
 }
 
 .nav-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
     font-family: var(--font-heading);
     font-size: 0.82rem;
     font-weight: 600;
@@ -309,6 +312,17 @@ a:hover {
     border-radius: var(--radius-pill);
     border: 1px solid transparent;
     transition: var(--transition);
+}
+
+.subpage-arrow {
+    flex-shrink: 0;
+    opacity: 0.85;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.nav-link:hover .subpage-arrow {
+    opacity: 1;
+    transform: translate(1.5px, -1.5px);
 }
 
 .nav-link:hover {
